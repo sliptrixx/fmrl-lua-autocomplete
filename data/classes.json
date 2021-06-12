@@ -1,0 +1,870 @@
+{
+    "script_values": {
+        "name": "script_values",
+        "type": "table",
+        "mode": "[RW]",
+        "doc": "Any variables inside this special table is tweakable in the editor"
+    },
+    "script_values_tooltips": {
+        "name": "script_values_tooltips",
+        "type": "table",
+        "mode": "[RW]",
+        "doc": "If variables are added here, the tooltips appear in the inspector"
+    },
+
+
+    "init": {
+        "name": "init",
+        "type": "function",
+        "doc": "This function is called once at the start of the object initialization"
+    },
+    "update": {
+        "name": "update",
+        "type": "function",
+        "doc": "This function is called once every frame"
+    },
+    "late_update": {
+        "name": "late_update",
+        "type": "function",
+        "doc": "This function is called once every frame, after update()"
+    },
+
+
+    "on_trigger_enter": {
+        "name": "on_trigger_enter",
+        "type": "function",
+        "doc": "This function is called when a trigger enters"
+    },
+    "on_trigger_stay": {
+        "name": "on_trigger_stay",
+        "type": "function",
+        "doc": "This function is called when a trigger stays"
+    },
+    "on_trigger_exit": {
+        "name": "on_trigger_exit",
+        "type": "function",
+        "doc": "This function is called when a trigger exits"
+    },
+    "on_collision_enter": {
+        "name": "on_collision_enter",
+        "type": "function",
+        "doc": "This function is called when a collider enters"
+    },
+    "on_collision_stay": {
+        "name": "on_collision_stay",
+        "type": "function",
+        "doc": "This function is called when the collider stays"
+    },
+    "on_collision_exit": {
+        "name": "on_collision_exit",
+        "type": "function",
+        "doc": "This function is called when the collider exits"
+    },
+
+
+    "receive_message": {
+        "name": "receive_message",
+        "type": "function",
+        "doc": "This function is called when subscribed catalyst message is broadcasted to the object"
+    },
+
+
+    "go": {
+        "name": "go",
+        "type": "gameobject",
+        "mode": "[R]",
+        "doc": "The gameobject the script is attached to"
+    },
+    "collider##":{
+        "name": "collider##",
+        "type": "collider_component",
+        "mode": "[R]",
+        "doc": "The collider that belongs to the script's gameobject where the ## will be replaced with 1, 2, 3, 4, etc. depending on how many ColliderComponents are attached to a gameobject."
+    },
+    "print": {
+        "name": "print",
+        "type": "function",
+        "args": {
+            "message": {
+                "name": "message",
+                "type": "string",
+                "doc": "The message to print to the engine's UI logger"
+            }
+        },
+        "doc": "Prints the given message to the engine's UI logger"
+    },
+    "clock": {
+        "name": "clock",
+        "type": "clock_type",
+        "mode": "[R]",
+        "doc": "The engine's global clock"
+    },
+    "utility": {
+        "name": "utility",
+        "type": "behavior_lua",
+        "mode": "[R]",
+        "doc": " Pointer to the BehaviorLua the this script is attached to"
+    },
+
+
+    "audio": {
+        "name": "audio",
+        "type": "audio_type",
+        "mode": "[R]",
+        "doc": "Singleton instance of Audio"
+    },
+    "uiManager": {
+        "name": "uiManager",
+        "type": "uiManager_type",
+        "mode": "[R]",
+        "doc": "Singleton instance of the UI Manager"
+    },
+    "debugdraw": {
+        "name": "debugdraw",
+        "type": "debugdraw_type",
+        "mode": "[R]",
+        "doc": "Singleton instance of the debug draw system"
+    },
+    "statemanager": {
+        "name": "statemanager",
+        "type": "state_manager",
+        "mode": "[R]",
+        "doc": "Singleton instance of the State Manager"
+    },
+    "currentscene": {
+        "name": "currentscene",
+        "type": "loadable_scene",
+        "mode": "[R]",
+        "doc": "The scene the object is part of"
+    },
+    "camera": {
+        "name": "camera",
+        "type": "camera_type",
+        "mode": "[R]",
+        "doc": "Singleton instance of the camera"
+    },
+    "input": {
+        "name": "input",
+        "type": "inputmanager",
+        "mode": "[R]",
+        "doc": "Singleton instance of InputManager used to get input"
+    },
+    "transform": {
+        "name": "transform",
+        "type": "transform_component",
+        "mode": "[R]",
+        "doc": "Transform component of the object"
+    },
+    "physicsbody": {
+        "name": "physicsbody",
+        "type": "physicsbody_component",
+        "mode": "[R]",
+        "doc": "PhysicsBody component of the object"
+    },
+    "animation": {
+        "name": "animation",
+        "type": "animation_component",
+        "mode": "[R]",
+        "doc": "Animation component of the object"
+    },
+    "light": {
+        "name": "light",
+        "type": "light_component",
+        "mode": "[R]",
+        "doc": "Light component of the object"
+    },
+    "renderable": {
+        "name": "renderable",
+        "type": "renderable_component",
+        "mode": "[R]",
+        "doc": "Renderable component of the object"
+    },
+    "timescale": {
+        "name": "timescale",
+        "type": "timescale_type",
+        "mode": "[R]",
+        "doc": "The individual timescale of the object"
+    },
+    "particle_emitter##": {
+        "name": "particle_emitter##",
+        "type": "particle_component",
+        "mode": "[R]",
+        "doc": "The particle emitter that belongs to the script's gameobject where the ## will be replaced with 1, 2, 3, 4, etc. depending on how many Particle Emitters are attached to a gameobject."
+    },
+    "materialmap": {
+        "name": "materialmap",
+        "type": "materialmap_type",
+        "mode": "[R]",
+        "doc": "The material map associated with the current scene"
+    },
+    "objectmanager":{
+        "name": "objectmanager",
+        "type": "object_manager",
+        "mode": "[R]",
+        "doc": "The object manager the script's gameobject is part of"
+    },
+    
+    
+    "filename": {
+        "name": "filename",
+        "type": "string",
+        "doc": "The filename attached to the behavior Lua"
+    },
+    "toWorld":
+    {
+        "name": "toWorld",
+        "type": "function",
+        "doc":  "Converts the given vector2 from screenspace to worldspace"
+    },
+    "toScreen":
+    {
+        "name": "toScreen",
+        "type": "function",
+        "doc":  "Converts the given vector2 from worldspace to screenspace"
+    },
+    "rayCast": {
+        "name": "rayCast",
+        "type": "bool",
+        "doc": "Performs a raycast from `start` to `end` ignoring the gamobjects in the exlusions list and returns the true if success"
+    },
+
+
+    "findBehavior":
+    {
+        "name": "findBehavior",
+        "type": "function",
+        "doc": "Finds the behavior with the given filename attached to the same gameobject. If not found returns nullptr."
+    },
+    "addBehavior": {
+        "name": "addBehavior",
+        "type": "function",
+        "doc": "Adds a Lua behavior with the given filename to the gameobject. Returns a pointer to the newly added behavior."
+    },
+    "removeBehavior": {
+        "name": "removeBehavior",
+        "type": "function",
+        "doc": "Removes the given behavior from the gameobject"
+    },
+    "removeBehaviorByFilename": {
+        "name": "removeBehaviorByFilename",
+        "type": "function",
+        "doc": "Removes the behavior with the given filename from the gameobject"
+    },
+
+
+    "subscribe": {
+        "name": "subscribe",
+        "type": "function",
+        "doc": "Subscribes the behavior to the given message"
+    },
+    "unsubscribe": {
+        "name": "unsubscribe",
+        "type": "function",
+        "doc": "Unsubscribe the behavior from the given message"
+    },
+    "broadcastGlobal": {
+        "name": "broadcastGlobal",
+        "type": "function",
+        "doc": "Broadcasts the message globally to all subscribers"
+    },
+    "broadcastToGameobjects": {
+        "name": "broadcastToGameobjects",
+        "type": "function",
+        "doc": "Broadcast the message to specific gameobjects (if they've subscribed) given their uuids"
+    },
+    "broadcastRadius": {
+        "name": "broadcastRadius",
+        "type": "function",
+        "doc": "Broadcasts the message to subscribed colliders around the given radius. Message the triggers if the \"messageTriggers\" is set to true."
+    },
+    "broadcastCollision": {
+        "name": "broadcastCollision",
+        "type": "function",
+        "doc": "Broadcasts the message to all subscribed overlapping/colliding gameobjects. If colliders are given, then message those specified colliders."
+    },
+
+
+    "getBehavior": {
+        "name": "getBehavior",
+        "type": "function",
+        "doc": "Searches for and gets a pointer to a BehaviorLua by filename"
+    },
+
+
+    "name": {
+        "name": "name",
+        "type": "string",
+        "doc": "The name of the gameobject"
+    },
+    "uuid": {
+        "name": "uuid",
+        "type": "string",
+        "doc": "The string representation of the UUID associated with the gameobject"
+    },
+    "layer": {
+        "name": "layer",
+        "type": "int",
+        "doc": "The collision layer index"
+    },
+
+
+    "getGameObject": {
+        "name": "getGameObject",
+        "type": "function",
+        "doc": "Gets a pointer to a gameobject with the requested string UUID"
+    },
+    "findGameObject": {
+        "name": "findGameObject",
+        "type": "function",
+        "doc": "Gets a pointer to the first gameobject with the requested name"
+    },
+    "createGameObject": {
+        "name": "createGameObject",
+        "type": "function",
+        "doc": "Creates a new gameobject with the requested name and returns a reference to it"
+    },
+    "addPrefab": {
+        "name": "addPrefab",
+        "type": "function",
+        "doc": "Given a filename, adds the prefab and returns a pointer to it"
+    },
+    "addPrefabAtPosition": {
+        "name": "addPrefabAtPosition",
+        "type": "function",
+        "doc": "Given a filename, adds the prefab at the requested position and returns a pointer to it"
+    },
+
+
+    "setUpdateMode": {
+        "name": "setUpdateMode",
+        "type": "function",
+        "doc": "Sets the update mode of the StateManager to the requested mode. The following are the available update modes: Edit, Play, Pause, & Restart."
+    },
+
+
+    "load": {
+        "name": "load",
+        "type": "function",
+        "doc": "Loads a scene with the requested filename"
+    },
+    "getFilename": {
+        "name": "getFilename",
+        "type": "function",
+        "doc": "Get the filename of the currently loaded scene"
+    },
+
+
+    "position": {
+        "name": "position",
+        "type": "vector3",
+        "doc": "The position of an object"
+    },
+    "scale": {
+        "name": "scale",
+        "type": "vector3",
+        "doc": "The scale of an object"
+    },
+    "rotation": {
+        "name": "rotation",
+        "type": "float",
+        "doc": "The rotation of an object"
+    },
+
+
+    "material": {
+        "name": "material",
+        "type": "physmaterial",
+        "doc": "The material associated with this physicsbody that affects bounciness, friction, and floor friction"
+    },
+    "getVelocity": {
+        "name": "getVelocity",
+        "type": "function",
+        "doc": "Gets the current velocity of the gameobject"
+    },
+    "setVelocity": {
+        "name": "setVelocity",
+        "type": "function",
+        "doc": "Sets the velocity to the given vector2"
+    },
+    "addForce": {
+        "name": "addForce",
+        "type": "function",
+        "doc": "Adds force to the gameobject over a duration of time in the direction and magnitude of the given vector2"
+    },
+    "addImpulse": {
+        "name": "addImpulse",
+        "type": "function",
+        "doc": "Adds impulse force to the gameobject instantly in the direction and magnitude of the given vector2"
+    },
+
+
+    "bounciness": {
+        "name": "bounciness",
+        "type": "float"
+    },
+    "floor_friction": {
+        "name": "floor_friction",
+        "type": "float"
+    },
+    "friction": {
+        "name": "friction",
+        "type": "float"
+    },
+
+
+    "trigger": {
+        "name": "trigger",
+        "type": "bool",
+        "doc": "If this value is true, the collider is a trigger"
+    },
+    "collision_monitor": {
+        "name": "collision_monitor",
+        "type": "bool",
+        "doc": "If this value is true, the collider will detect and emit collision events"
+    },
+    "offset": {
+        "name": "offset",
+        "type": "vector2",
+        "doc": "The local offset applied from the transform component"
+    },
+    "makeCircle": {
+        "name": "makeCircle",
+        "type": "function",
+        "doc": "Makes a circle collider with the given radius and the number of segments to construct the circle"
+    },
+    "makeBox": {
+        "name": "makeBox",
+        "type": "function",
+        "doc": "Makes a box collider with the given width and height"
+    },
+    "makeArc": {
+        "name": "makeArc",
+        "type": "function",
+        "doc": "Similar to a circle collider, this function constructs an arc given the angle the radius, the number of segments, the angle to start and end the arc."
+    },
+
+
+    "normal": {
+        "name": "normal",
+        "type": "vector2",
+        "doc": "The directional vector representing the normal at the point of collision"
+    },
+    "displacement": {
+        "name": "displacement",
+        "type": "vector2",
+        "doc": "The minimum translation vector used to resolve the collision"
+    },
+    "point": {
+        "name": "point",
+        "type": "vector2",
+        "doc": "The vector representing the point of collision in worldspace"
+    },
+    "first_object": {
+        "name": "first_object",
+        "type": "gameobject",
+        "doc": "A pointer to the first object in the collision"
+    },
+    "second_object": {
+        "name": "second_object",
+        "type": "gameobject",
+        "doc": "A pointer to the second object in the collision"
+    },
+    "first_collider": {
+        "name": "first_collider",
+        "type": "collider_component",
+        "doc": "A pointer to the first ColliderComponent in the collision"
+    },
+    "second_collider": {
+        "name": "second_collider",
+        "type": "collider_component",
+        "doc": "A pointer to the second ColliderComponent in the collision"
+    },
+
+
+    "playEvent": {
+        "name": "playEvent",
+        "type": "function",
+        "doc": "Plays an audio event with the given handle"
+    },
+    "playAndForgetEvent": {
+        "name": "playAndForgetEvent",
+        "type": "function",
+        "doc": "Plays an audio event with the given handle without tracking its instance"
+    },
+    "stopEvent": {
+        "name": "stopEvent",
+        "type": "function",
+        "doc": "Stops the audio event with the given handle"
+    },
+    "stopAllEvents": {
+        "name": "stopAllEvents",
+        "type": "function",
+        "doc": "Stops all playing audio events"
+    },
+    "setParameter": {
+        "name": "setParameter",
+        "type": "function",
+        "doc": "Sets the value of an event instance's parameter"
+    },
+    "getParameter": {
+        "name": "getParameter",
+        "type": "function",
+        "doc": "Gets the value of an event instance's parameter"
+    },
+    "setGlobalParameter": {
+        "name": "setGlobalParameter",
+        "type": "function",
+        "doc": "Sets the value of a global parameter"
+    },
+    "getGlobalParameter": {
+        "name": "getGlobalParameter",
+        "type": "function",
+        "doc": "Gets the value of a global parameter"
+    },
+    "setVolume": {
+        "name": "setVolume",
+        "type": "function",
+        "doc": "Sets the volume of a bus by its handle"
+    },
+    "getVolume": {
+        "name": "getVolume",
+        "type": "function",
+        "doc": "Gets the volume of a bus by its handle"
+    },
+    "setEventVolume": {
+        "name": "setEventVolume",
+        "type": "function",
+        "doc": "Set the audio event instance's specific volume"
+    },
+    "getEventVolume": {
+        "name": "getEventVolume",
+        "type": "function",
+        "doc": "Get the audio event instance's specific volume"
+    },
+    "pauseEvent": {
+        "name": "pauseEvent",
+        "type": "function",
+        "doc": "Pauses an audio event instance with the given handle"
+    },
+    "unpauseEvent": {
+        "name": "unpauseEvent",
+        "type": "function",
+        "doc": "Resumes an audio event instance with the given handle"
+    },
+    "isEventPlaying": {
+        "name": "isEventPlaying",
+        "type": "function",
+        "doc": "Is the audio event with the given handle currently playing?"
+    },
+    "isEventPaused": {
+        "name": "isEventPaused",
+        "type": "function",
+        "doc": "Is the audio event with the given handle currently paused?"
+    },
+    "triggerCue": {
+        "name": "triggerCue",
+        "type": "function",
+        "doc": "Triggers the cue of an audio event with the given handle"
+    },
+
+
+    "setTexture": {
+        "name": "setTexture",
+        "type": "function",
+        "doc": "Sets the texture with the given texture handle"
+    },
+    "getTexture": {
+        "name": "getTexture",
+        "type": "function",
+        "doc": "Gets the texture handle of the renderable component"
+    },
+    "setFlipX": {
+        "name": "setFlipX",
+        "type": "function",
+        "doc": "Flip the texture horizontally in the renderable component"
+    },
+    "setLayer": {
+        "name": "setLayer",
+        "type": "function",
+        "doc": "Sets the drawing layer of the renderable component to the requested layer"
+    },
+    "getLayer": {
+        "name": "getLayer",
+        "type": "function",
+        "doc": "Gets the current drawing layer of the renderable component"
+    },
+    "setColor": {
+        "name": "setColor",
+        "type": "function",
+        "doc": "Sets the blend color of the renderable component"
+    },
+
+
+    "setAnimation": {
+        "name": "setAnimation",
+        "type": "function",
+        "doc": "sets the animation with the given handle"
+    },
+    "setAnimationPack": {
+        "name": "setAnimationPack",
+        "type": "function",
+        "doc": "sets an animation pack with the given handle"
+    },
+    "getAnimationName": {
+        "name": "getAnimationName",
+        "type": "function",
+        "doc": "Gets the name of the current animation"
+    },
+    "setFrame": {
+        "name": "setFrame",
+        "type": "function",
+        "doc": "Sets the current frame of the animation"
+    },
+    "getFrame": {
+        "name": "getFrame",
+        "type": "function",
+        "doc": "Gets the current frame of the animation"
+    },
+    "setTimeScale": {
+        "name": "setTimeScale",
+        "type": "function",
+        "doc": "Sets the timescale of the animation which determines how fast or slow the animation plays"
+    },
+    "getTimeScale": {
+        "name": "getTimeScale",
+        "type": "function",
+        "doc": "Gets the current timescale of the animation"
+    },
+    "getCommand": {
+        "name": "getCommand",
+        "type": "function",
+        "doc": "Get the current animation command in string form"
+    },
+    "setCommand": {
+        "name": "setCommand",
+        "type": "function",
+        "doc": "Set an animation command. The following are the available animation commands: Play, RestartAndPlay, PlayOnce, Pause, Stop, Reverse, & ReverseOnce"
+    },
+
+
+    "diffuse": {
+        "name": "diffuse",
+        "type": "vector4",
+        "doc": "The diffuse value of the light"
+    },
+    "radius": {
+        "name": "radius",
+        "type": "float",
+        "doc": "The radius of the light"
+    },
+    "intensity": {
+        "name": "intensity",
+        "type": "float",
+        "doc": "The intensity of the light"
+    },
+    "shadowCaster": {
+        "name": "shadowCaster",
+        "type": "bool",
+        "doc": "Does the light cast shadows?"
+    },
+    "direction": {
+        "name": "direction",
+        "type": "float",
+        "doc": "The direction for the spotlight. Anything greater than 0 is a spotlight and 0 is a point light"
+    },
+    "angleOuter": {
+        "name": "angleOuter",
+        "type": "float",
+        "doc": "The spotlight's outer angle for the penumbra given in degrees between 0-180"
+    },
+    "angleInner": {
+        "name": "angleInner",
+        "type": "float",
+        "doc": "The inner angle of the spotlight given in degrees between 0-180"
+    },
+    "start": {
+        "name": "start",
+        "type": "float",
+        "doc": "Ratio of how far into the spotlight to begin lighting. The value is between 0.0-1.0"
+    },
+    "register": {
+        "name": "register",
+        "type": "function",
+        "doc": "Registers the light to the light engine"
+    },
+
+
+    "emitOnTimer": {
+        "name": "emitOnTimer",
+        "type": "bool",
+        "doc": "Does the particle emitter emit based on a timer?"
+    },
+    "emitDelay": {
+        "name": "emitDelay",
+        "type": "function",
+        "doc": "Emit particles after the preconfigured delay"
+    },
+    "emitDelayByFloat": {
+        "name": "emitDelayByFloat",
+        "type": "function",
+        "doc": "Emit particles after the specified delay"
+    },
+    "emitInstant": {
+        "name": "emitInstant",
+        "type": "function",
+        "doc": "Emit particles instantaneously"
+    },
+
+
+    "getPosition": {
+        "name": "getPosition",
+        "type": "function",
+        "doc": "Gets the position of the camera"
+    },
+    "setPosition": {
+        "name": "setPosition",
+        "type": "function",
+        "doc": "Sets the position of the camera to the given vector"
+    },
+    "getZoom": {
+        "name": "getZoom",
+        "type": "function",
+        "doc": "Gets the zoom of the camera"
+    },
+    "setZoom": {
+        "name": "setZoom",
+        "type": "function",
+        "doc": "Sets the zoom of the camera to the given value. The minimum zoom is 0.007 and the maximum zoom is 0.25"
+    },
+
+
+    "keyPressed": {
+        "name": "keyPressed",
+        "type": "function"
+    },
+    "keyHeld": {
+        "name": "keyHeld",
+        "type": "function"
+    },
+    "keyReleased": {
+        "name": "keyReleased",
+        "type": "function"
+    },
+    "mouseLeftClicked": {
+        "name": "mouseLeftClicked",
+        "type": "function"
+    },
+    "mouseLeftHeld": {
+        "name": "mouseLeftHeld",
+        "type": "function"
+    },
+    "mouseLeftReleased": {
+        "name": "mouseLeftReleased",
+        "type": "function"
+    },
+    "mouseRightClicked": {
+        "name": "mouseRightClicked",
+        "type": "function"
+    },
+    "mouseRightHeld": {
+        "name": "mouseRightHeld",
+        "type": "function"
+    },
+    "mouseRightReleased": {
+        "name": "mouseRightReleased",
+        "type": "function"
+    },
+    "mousePosition": {
+        "name": "mousePosition",
+        "type": "function"
+    },
+    "mouseClickPosition": {
+        "name": "mouseClickPosition",
+        "type": "function"
+    },
+    "mouseReleasePosition": {
+        "name": "mouseReleasePosition",
+        "type": "function"
+    },
+
+
+    "showScreen": {
+        "name": "showScreen",
+        "type": "function",
+        "doc": "Opens a screen with the given name and display it to the user. Optionally, can request other open screens to not be closed"
+    },
+
+
+    "deltaTime": {
+        "name": "deltaTime",
+        "type": "function",
+        "doc": "Get the dt scaled by the timescale"
+    },
+    "clampedDeltaTime": {
+        "name": "clampedDeltaTime",
+        "type": "function",
+        "doc": "Gets a dt scaled by timescale but clamped to help with low framerate drops"
+    },
+    "current": {
+        "name": "current",
+        "type": "function",
+        "doc": "Get the current timescale"
+    },
+    "min": {
+        "name": "min",
+        "type": "function",
+        "doc": "Get the minimum the timescale of the object could be"
+    },
+    "max": {
+        "name": "max",
+        "type": "function",
+        "doc": "Get the maximum the timescale of the object could be"
+    },
+    "setCurrent": {
+        "name": "setCurrent",
+        "type": "function",
+        "doc": "Set the timescale clamped to the set min and max"
+    },
+    "setMin": {
+        "name": "setMin",
+        "type": "function",
+        "doc": "Set the minimum value timescale could be"
+    },
+    "setMax": {
+        "name": "setMax",
+        "type": "function",
+        "doc": "Set the maximum value timescale could be"
+    },
+
+
+    "Line": {
+        "name": "Line",
+        "type": "function",
+        "doc": "Draws a debug line from start to end with the given color and thickness"
+    },
+
+
+    "get": {
+        "name": "get",
+        "type": "function"
+    },
+
+
+    "sound": {
+        "name": "sound",
+        "type": "int",
+        "doc": "The index of the SurfaceType in the footsteps event in the FMOD project"
+    },
+
+
+    "length": {
+        "name": "length",
+        "type": "function",
+        "doc": "Gets the length of the vector3"
+    },
+    "distanceSquared": {
+        "name": "distanceSquared",
+        "type": "function",
+        "doc": "gets the squared distance between two vector3s"
+    }
+}

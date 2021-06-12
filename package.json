@@ -3,6 +3,11 @@
   "displayName": "FMRL Lua Autocomplete",
   "description": "Adds autocomplete features for code written in Lua for the FMRL engine",
   "version": "0.0.1",
+  "author": {
+    "name": "Hibnu Hishath",
+    "email": "hibnu@hibzz.games"
+  },
+  "publisher": "sliptrixx",
   "engines": {
     "vscode": "^1.56.0"
   },
@@ -40,6 +45,7 @@
   },
   "devDependencies": {
     "@types/glob": "^7.1.3",
+    "@types/lodash": "^4.14.169",
     "@types/mocha": "^8.0.4",
     "@types/node": "^12.11.7",
     "@types/vscode": "^1.56.0",
@@ -52,6 +58,6 @@
     "typescript": "^4.1.3",
     "vscode-test": "^1.5.0",
     "webpack": "^5.19.0",
-    "webpack-cli": "^4.4.0"
+    "webpack-cli": "^4.7.0"
   }
 }
